@@ -15,7 +15,7 @@ app.get('/', function (req, res) {
 
 app.post('/api/fileanalyse', upload, function(req, res){
   if(req.file){
-    res.json({filename:req.file.originalname, size:req.file.size, type:req.file.mimetype})
+    res.json({name:req.file.originalname, size:req.file.size, type:req.file.mimetype})
   }
   else{
     res.json({error:'No file found'});
